@@ -1,5 +1,9 @@
 name: 'Setup Steam Game (Windows)'
 description: 'Installs a Windows Steam game'
+branding:
+  icon: box
+  color: gray-dark
+
 inputs:
   username:
     description: 'Log into Steam using this user'
