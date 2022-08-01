@@ -1,0 +1,24 @@
+name: 'Setup Steam Game (Windows)'
+description: 'Installs a Windows Steam game'
+inputs:
+  username:
+    description: 'Log into Steam using this user'
+    required: false
+    default: 'anonymous'
+  password:
+    description: 'The password for the user to log into Steam with'
+    required: false
+    default: ''
+  gameid:
+    description: 'The ID of the game you want to set up on Steam'
+    required: true
+  folder:
+    description: 'The name of the folder to download the game into. If the folder exists, the game will be verified.'
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - run: .\setup-steamcmd.ps1
+      shell: pwsh
+    - run: .\setup-steam-game.ps1 ${{ gameid }} ${{ folder }} windows ${{ username }} ${{ password }}
+      shell: pwsh
