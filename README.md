@@ -1,14 +1,11 @@
 <h1 align="center">
   setup-steam-game
 
-  <small align="center">
-    <font size="3">(Windows)</font>
-  </small>
 </h1>
 
 <div align="center">
 
-  GitHub Action for downloading a Steam game into a folder using SteamCMD
+  GitHub Action for downloading a Windows Steam game into a folder using SteamCMD
 </div>
 
 # About
