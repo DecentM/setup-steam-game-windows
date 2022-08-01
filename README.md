@@ -40,3 +40,7 @@ This is an example setup for ChilloutVR, adjust these values differently if you'
     username: ${{ secrets.STEAM_PASSWORD }}
     password: ${{ secrets.STEAM_USER }}
 ```
+
+# License
+
+The use and documentation of this project are governed by [Version 3 of the GNU GENERAL PUBLIC LICENSE](LICENSE).
