@@ -12,6 +12,10 @@ Write-Output "Installing and verifying game $gameid..."
     +login "$steamuser" "$steampass" `
     +app_update $gameid validate `
     +quit `
-    || & { "SteamCMD exited with exit code $global:LASTEXITCODE, but we don't care about it."; $global:LASTEXITCODE = 0 }
+    || & {
+        if ($global:LASTEXITCODE -eq 7) {
+            "SteamCMD exited with exit code $global:LASTEXITCODE, but we don't care about it."; $global:LASTEXITCODE = 0
+        }
+     }
 
 Write-Output "Done."
