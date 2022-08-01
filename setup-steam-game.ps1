@@ -8,7 +8,7 @@ Write-Output "Installing and verifying game $gameid..."
 
 .\SteamCMD\steamcmd\steamcmd.exe `
     +@sSteamCmdForcePlatformType $platform `
-    +force_install_dir ./$folder `
+    +force_install_dir ../../$folder `
     +login "$steamuser" "$steampass" `
     +app_update $gameid validate `
     +quit `
