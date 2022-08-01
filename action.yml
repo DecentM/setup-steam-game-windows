@@ -18,7 +18,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: .\setup-steamcmd.ps1
+    - run: ${{ github.action_path }}/setup-steamcmd.ps1
       shell: pwsh
-    - run: .\setup-steam-game.ps1 ${{ inputs.gameid }} ${{ inputs.folder }} windows ${{ inputs.username }} ${{ inputs.password }}
+    - run: ${{ github.action_path }}/setup-steam-game.ps1 ${{ inputs.gameid }} ${{ inputs.folder }} windows ${{ inputs.username }} ${{ inputs.password }}
       shell: pwsh
