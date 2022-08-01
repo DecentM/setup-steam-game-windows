@@ -18,7 +18,7 @@ While SteamCMD supports anonymous login, most games - even free ones - require t
 This is an example setup for ChilloutVR, adjust these values differently if you're installing a different game.
 
 ```yaml
-- uses: DecentM/setup-steam-game-windows@v1
+- uses: DecentM/setup-steam-game-windows@v1.0.0
   with:
     # The Game ID on Steam
     # You can get this from SteamDB, by searching for your game, and then copying the App ID.
